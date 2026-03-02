@@ -1,10 +1,13 @@
--- vim.api.nvim_create_autocmd("CursorHold", {
---   callback = function()
---     vim.diagnostic.open_float(nil, {
---       focusable = false,
---       border = "rounded",
---       source = "always",
---       prefix = "",
---     })
---   end,
--- })
+vim.api.nvim_create_autocmd("InsertEnter", {
+    callback = function()
+        vim.opt.number = false
+        vim.opt.relativenumber = true
+    end,
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+    callback = function()
+        vim.opt.number = true
+        vim.opt.relativenumber = false
+    end,
+})
