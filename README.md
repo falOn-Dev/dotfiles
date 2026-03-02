@@ -5,7 +5,7 @@
 ## Dotfiles Migrated from [dotfiles_old](https://github.com/falOn-Dev/dotfiles_old)
 
 - [X] Zshell
-- [ ] NeoVim
+- [X] NeoVim
 - [ ] Sway
 - [ ] Waybar
 - [ ] Starship
