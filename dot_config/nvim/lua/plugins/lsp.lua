@@ -12,6 +12,13 @@ return {
 
 		configure_lsp("lua_ls", {
 			capabilities = capabilities,
+            settings = {
+                Lua = {
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true)
+                    }
+                }
+            }
 		})
 		configure_lsp("pyright", {
 			capabilities = capabilities,
