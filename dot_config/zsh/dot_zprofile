@@ -1,0 +1,19 @@
+# App Exports
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+
+# XDG Exports
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+# Path
+export PATH="$PATH:$HOME/go/bin"
+
+# Config Locations
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
+# Usernames
+export GITHUB_USERNAME="falOn-Dev"
