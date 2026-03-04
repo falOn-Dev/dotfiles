@@ -1,3 +1,10 @@
 README.md
 docs/
-.config/nvim/lazy-lock.json
+dot_config/nvim/lazy-lock.json
+
+{{- if not .sway }}
+.config/sway/**
+.config/waybar/**
+.config/mako/**
+.config/fuzzel/**
+{{- end }}

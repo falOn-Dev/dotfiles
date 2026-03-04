@@ -1,0 +1,32 @@
+{{- $nvim := promptBoolOnce . "nvim" "Set up Neovim" -}}
+
+{{- $editor := "nano" -}}
+{{- if $nvim -}}
+{{- $editor = "nvim" -}}
+{{- end -}}
+
+{{- $de := promptBoolOnce . "de" "Set up a desktop environment / WM" -}}
+
+{{- $sway := false -}}
+{{- if $de -}}
+{{- $sway = promptBoolOnce . "sway" "Use Sway for the desktop" -}}
+{{- end -}}
+
+{{- $github_username := promptStringOnce . "github_username" "Github Username: " -}}
+
+{{- $accent := promptStringOnce . "accent" "System accent color hex (ffffff)" -}}
+{{- $foreground := promptStringOnce . "foreground" "System foreground color hex (ffffff)" -}}
+{{- $background := promptStringOnce . "background" "System background color hex (ffffff)" -}}
+
+
+[data]
+nvim = {{ $nvim }}
+de   = {{ $de }}
+sway = {{ $sway }}
+
+github_username = {{ $github_username | quote }}
+editor = {{ $editor | quote}}
+
+accent = {{ $accent | upper | quote }}
+foreground = {{ $foreground | upper | quote }}
+background = {{ $background | upper | quote }}

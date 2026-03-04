@@ -1,6 +1,6 @@
 # App Exports
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR={{- .editor}}
+export VISUAL={{- .editor}}
 export PAGER=less
 
 # XDG Exports
@@ -16,4 +16,9 @@ export PATH="$PATH:$HOME/go/bin"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 
 # Usernames
-export GITHUB_USERNAME="falOn-Dev"
+export GITHUB_USERNAME={{- .github_username}}
+
+# Colors
+export ACCENT={{- .accent }}
+export FOREGROUND={{- .foreground }}
+export BACKGROUND={{- .background }}
